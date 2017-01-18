@@ -66,7 +66,6 @@ if (!argv.s && !argv.silent) {
       }
       else {
         logger.info(
-            path: arvg.path,
           '[%s] "%s %s" "%s"',
           date, req.method.cyan, req.url.cyan,
           req.headers['user-agent']
@@ -96,6 +95,7 @@ else {
 function listen(port) {
   var options = {
     root: argv._[0],
+    path: argv.path,
     cache: argv.c,
     showDir: argv.d,
     autoIndex: argv.i,
