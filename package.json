@@ -1,5 +1,5 @@
 {
-  "name": "http-server",
+  "name": "http-server-subpath",
   "version": "0.10.0",
   "description": "A simple zero-configuration command-line http server",
   "main": "./lib/http-server",
