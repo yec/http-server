@@ -22,6 +22,7 @@ if (argv.h || argv.help) {
     '  -a           Address to use [0.0.0.0]',
     '  -d           Show directory listings [true]',
     '  -i           Display autoIndex [true]',
+    '  --path       Prepend requests with path to emulate GitHub Pages [none]',
     '  -g --gzip    Serve gzip files when possible [false]',
     '  -e --ext     Default file extension if none supplied [none]',
     '  -s --silent  Suppress log messages from output',
@@ -65,6 +66,7 @@ if (!argv.s && !argv.silent) {
       }
       else {
         logger.info(
+            path: arvg.path,
           '[%s] "%s %s" "%s"',
           date, req.method.cyan, req.url.cyan,
           req.headers['user-agent']
